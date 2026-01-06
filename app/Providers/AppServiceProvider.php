@@ -6,7 +6,7 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 use Illuminate\Support\Facades\Route;
 use App\Models\CategoryIcon;
 
-class RouteServiceProvider extends ServiceProvider
+class AppServiceProvider extends ServiceProvider
 {
     public function boot()
     {
@@ -18,6 +18,4 @@ class RouteServiceProvider extends ServiceProvider
             return CategoryIcon::where('slug', $value)->firstOrFail();
         });
     }
-
-    // بقیه کدها (مثل map() و ... )
 }
